@@ -11,6 +11,7 @@ import HRPerformance from "@/pages/HRPerformance"
 import HRRetention from "@/pages/HRRetention"
 import AllocationSimulation from "@/pages/AllocationSimulation"
 import MeetingTranscript from "@/pages/MeetingTranscript"
+import LandingPage from "@/pages/LandingPage"
 import { VoiceChatbot } from "@/components/VoiceChatbot/VoiceChatbot"
 import { motion } from "framer-motion"
 import { ArrowLeft, Briefcase, Users, BarChart3, Brain, Heart, Activity, Database, CheckCircle, XCircle } from "lucide-react"
@@ -56,6 +57,7 @@ type Tab = PMTab | HRTab
 
 function App() {
   // --- State Merged ---
+  const [showLanding, setShowLanding] = useState(true)
   const [health, setHealth] = useState<Health | null>(null)
   const [metrics, setMetrics] = useState<Metrics | null>(null)
   const [githubConnected, setGithubConnected] = useState<boolean | null>(null)
@@ -120,6 +122,11 @@ function App() {
   }
 
   // --- Full-screen / Overlay Views ---
+
+  // Landing Page
+  if (showLanding) {
+    return <LandingPage onLaunchDashboard={() => { setShowLanding(false); setActiveTab('dashboard'); }} />
+  }
 
   if (activeTab === 'graph') {
     return (
