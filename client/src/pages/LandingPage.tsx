@@ -226,14 +226,12 @@ export default function LandingPage({ onLaunchDashboard }: LandingPageProps) {
         {/* ═══ NAVBAR ════════════════════════════════════════ */}
         <nav className="fixed top-0 w-full z-50 bg-[#080a0f]/90 backdrop-blur-xl border-b border-white/6">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="relative w-8 h-8 flex items-center justify-center">
-                <div className="absolute inset-0 bg-[#0ea5e9] opacity-20 blur-sm rounded" />
-                <Zap className="w-4 h-4 text-[#0ea5e9] relative z-10" />
-              </div>
-              <span className="text-sm font-bold tracking-[0.15em] uppercase text-white">
-                Synth<span className="text-[#0ea5e9]">AI</span>
-              </span>
+            <div 
+              className="flex items-baseline cursor-default select-none"
+              style={{ fontFamily: "'Instrument Serif', serif" }}
+            >
+              <span className="text-2xl italic text-[#0ea5e9] tracking-tight">Synth</span>
+              <span className="text-xl font-bold ml-0.5 text-white/90 transform -translate-y-[1px]">AI</span>
             </div>
 
             <div className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.18em] text-white/40">
@@ -776,7 +774,8 @@ export default function LandingPage({ onLaunchDashboard }: LandingPageProps) {
                     <div
                       className="relative w-22 h-22 flex flex-col items-center justify-center mb-5"
                       style={{
-                        background: `linear-gradient(135deg, ${l.col}18 0%, ${l.col}08 100%)`,
+                        backgroundImage: `linear-gradient(135deg, ${l.col}18 0%, ${l.col}08 100%)`,
+                        backgroundColor: "#0a0c12",
                         border: `1.5px solid ${l.col}50`,
                         boxShadow: `0 0 28px ${l.col}22, inset 0 0 20px ${l.col}08`,
                       }}
@@ -1078,13 +1077,14 @@ export default function LandingPage({ onLaunchDashboard }: LandingPageProps) {
           style={{ background: "#080a0f", borderTop: "1px solid rgba(255,255,255,0.05)" }}
         >
           <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="relative w-6 h-6 flex items-center justify-center">
-                <div className="absolute inset-0 bg-[#0ea5e9] opacity-15 blur-sm" />
-                <Zap className="w-3.5 h-3.5 text-[#0ea5e9] relative z-10" />
-              </div>
-              <span className="text-[11px] uppercase tracking-[0.18em]" style={{ color: "rgba(255,255,255,0.25)" }}>
-                SynthAI — Enterprise Delivery Intelligence
+            <div 
+              className="flex items-baseline cursor-default select-none"
+              style={{ fontFamily: "'Instrument Serif', serif" }}
+            >
+              <span className="text-xl italic text-[#0ea5e9]/70 tracking-tight">Synth</span>
+              <span className="text-lg font-bold ml-0.5 text-white/30 transform -translate-y-[1px]">AI</span>
+              <span className="ml-4 text-[10px] uppercase tracking-[0.25em]" style={{ color: "rgba(255,255,255,0.15)", fontFamily: "'JetBrains Mono', monospace" }}>
+                Enterprise Delivery Intelligence
               </span>
             </div>
             <div className="flex items-center gap-4 text-[10px] uppercase tracking-wider" style={{ color: "rgba(255,255,255,0.2)" }}>

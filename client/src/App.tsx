@@ -392,11 +392,17 @@ function HRDashboard({ onNavigate }: { onNavigate: (tab: Tab) => void }) {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-12"
+        className="text-center mb-12 flex flex-col items-center"
       >
-        <h1 className="text-4xl font-bold mb-4">HR Command Center</h1>
-        <p className="text-muted-foreground">
-          AI-powered employee analytics, performance management, and retention tracking
+        <div 
+          className="flex items-baseline cursor-default select-none group mb-4"
+          style={{ fontFamily: "'Instrument Serif', serif" }}
+        >
+          <span className="text-5xl italic text-[#0ea5e9] tracking-tight">Synth</span>
+          <span className="text-3xl font-bold ml-0.5 text-foreground tracking-[0.05em] transform -translate-y-[1px]">AI</span>
+        </div>
+        <p className="text-muted-foreground text-xs uppercase tracking-[0.4em] font-mono font-bold">
+          Human Resources Command Center
         </p>
       </motion.div>
 

@@ -712,20 +712,17 @@ export function Dashboard({ onNavigate, githubConnected, onConnectGitHub }: Dash
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b-2 border-foreground pb-6"
         >
-          <div className="flex items-center gap-3 sm:gap-4">
-            <motion.div 
-              className="w-10 h-10 sm:w-14 sm:h-14 bg-foreground flex items-center justify-center"
-              animate={{ rotate: [0, 5, -5, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          <div className="flex flex-col items-start gap-1">
+            <div 
+              className="flex items-baseline cursor-default select-none group"
+              style={{ fontFamily: "'Instrument Serif', serif" }}
             >
-              <Layers className="w-5 h-5 sm:w-7 sm:h-7 text-background" />
-            </motion.div>
-            <div>
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight">Command Center</h1>
-              <p className="text-[9px] sm:text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
-                Business Intelligence Dashboard
-              </p>
+              <span className="text-3xl italic text-[#0ea5e9] tracking-tight">Synth</span>
+              <span className="text-2xl font-bold ml-0.5 text-foreground tracking-[0.05em] transform -translate-y-[1px]">AI</span>
             </div>
+            <p className="text-[9px] font-mono text-muted-foreground uppercase tracking-[0.3em] font-semibold">
+              Enterprise Delivery Intelligence
+            </p>
           </div>
           
           <div className="flex items-center gap-2 sm:gap-4">
